@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+protocol TimerModel {
+    var isWorkTime: Bool { get set }
+    var isStarted: Bool { get set }
+    var isAnimationStarted: Bool { get set}
+    var workTime: Int { get set }
+    var restTime: Int { get set }
+}
+
+struct TimerEntity: TimerModel {
+    var isWorkTime = true
+    var isStarted = false
+    var isAnimationStarted = false
+    var workTime = 2
+    var restTime = 1
+}
