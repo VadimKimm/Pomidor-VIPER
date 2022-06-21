@@ -7,23 +7,55 @@
 
 import UIKit
 
+protocol TimerViewInput: AnyObject {
+    func displayTimerLabel(with title: String)
+    func dislpayStartPauseButton(forModeIswork: Bool)
+}
+
+protocol TimerViewOutput: AnyObject {
+    init(view: TimerViewInput)
+    func showDetails()
+    func startPauseButtonTapped()
+}
+
 class TimerViewController: UIViewController {
+
+    var presenter: TimerViewOutput!
+
+    private var timerView: TimerView? {
+        guard isViewLoaded else { return nil }
+        return view as? TimerView
+    }
+
+
+    //MARK: - Lifecycle -
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        view = TimerView()
+        timerView?.startPauseButton.addTarget(self,
+                                              action: #selector(startPauseButtonTapped),
+                                              for: .touchUpInside)
+        presenter.showDetails()
     }
-    
 
-    /*
-    // MARK: - Navigation
+    // MARK: - @objc functions -
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func startPauseButtonTapped(sender: UIButton) {
+        presenter.startPauseButtonTapped()
     }
-    */
+}
+
+//MARK: - TimerViewInput -
+extension TimerViewController: TimerViewInput {
+
+    func displayTimerLabel(with title: String) {
+        timerView?.timerLabel.text = title
+    }
+
+    func dislpayStartPauseButton(forModeIswork: Bool) {
+        timerView?.startPauseButton.tintColor = forModeIswork ? .red : .green
+    }
 
 }
