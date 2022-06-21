@@ -13,6 +13,7 @@ protocol TimerInteractorInput: AnyObject {
     init(presenter: TimerInteractorOutput)
 
     func provideTimer()
+    func toggleIsWorkTime()
 }
 
 protocol TimerInteractorOutput: AnyObject {
@@ -42,6 +43,11 @@ class TimerInteractor: TimerInteractorInput {
         let timerData = TimerData(timerLabel: timer.workTime,
                                   isWorkTime: timer.isWorkTime)
         presenter.receiveTimer(with: timerData)
+    }
+
+    func toggleIsWorkTime() {
+        isWorkTime.toggle()
+        presenter.receiveTimerMode(isWorkTime: isWorkTime)
     }
 
 }

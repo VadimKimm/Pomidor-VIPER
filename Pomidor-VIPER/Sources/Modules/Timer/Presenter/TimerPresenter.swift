@@ -27,7 +27,7 @@ class TimerPresenter: TimerViewOutput {
     }
 
     func startPauseButtonTapped() {
-
+        interactor.toggleIsWorkTime()
     }
 }
 
@@ -40,11 +40,9 @@ extension TimerPresenter: TimerInteractorOutput {
 
         view.displayTimerLabel(with: timerLabelTextForWork)
         view.dislpayStartPauseButton(forModeIswork: timerData.isWorkTime)
-
-
     }
 
     func receiveTimerMode(isWorkTime: Bool) {
-
+        view.dislpayStartPauseButton(forModeIswork: isWorkTime)
     }
 }
