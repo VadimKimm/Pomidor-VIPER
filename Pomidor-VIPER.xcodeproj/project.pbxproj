@@ -56,15 +56,103 @@
 		DDB391D728607DEE005F2DC9 /* Pomidor-VIPER */ = {
 			isa = PBXGroup;
 			children = (
-				DDB391D828607DEE005F2DC9 /* AppDelegate.swift */,
-				DDB391DA28607DEE005F2DC9 /* SceneDelegate.swift */,
-				DDB391DC28607DEE005F2DC9 /* ViewController.swift */,
+				DDB391F42861B4AC005F2DC9 /* Sources */,
+				DDB391F32861B480005F2DC9 /* Resources */,
+			);
+			path = "Pomidor-VIPER";
+			sourceTree = "<group>";
+		};
+		DDB391EC2861B342005F2DC9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DDB391ED2861B34B005F2DC9 /* Timer */,
+				DDB391F62861B501005F2DC9 /* Settings */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DDB391ED2861B34B005F2DC9 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				DDB391EE2861B363005F2DC9 /* View */,
+				DDB391EF2861B36A005F2DC9 /* Interactor */,
+				DDB391F02861B38D005F2DC9 /* Presenter */,
+				DDB391F12861B398005F2DC9 /* Entity */,
+				DDB391F22861B3A6005F2DC9 /* Router */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		DDB391EE2861B363005F2DC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDB391EF2861B36A005F2DC9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DDB391F02861B38D005F2DC9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DDB391F12861B398005F2DC9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DDB391F22861B3A6005F2DC9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DDB391F32861B480005F2DC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				DDB391DE28607DEE005F2DC9 /* Main.storyboard */,
 				DDB391E128607DEF005F2DC9 /* Assets.xcassets */,
 				DDB391E328607DEF005F2DC9 /* LaunchScreen.storyboard */,
 				DDB391E628607DEF005F2DC9 /* Info.plist */,
 			);
-			path = "Pomidor-VIPER";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DDB391F42861B4AC005F2DC9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DDB391F52861B4C4005F2DC9 /* App */,
+				DDB391EC2861B342005F2DC9 /* Modules */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DDB391F52861B4C4005F2DC9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DDB391D828607DEE005F2DC9 /* AppDelegate.swift */,
+				DDB391DA28607DEE005F2DC9 /* SceneDelegate.swift */,
+				DDB391DC28607DEE005F2DC9 /* ViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DDB391F62861B501005F2DC9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +377,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7CZSM4DJ6N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Pomidor-VIPER/Info.plist";
+				INFOPLIST_FILE = "Pomidor-VIPER/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +405,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7CZSM4DJ6N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Pomidor-VIPER/Info.plist";
+				INFOPLIST_FILE = "Pomidor-VIPER/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
