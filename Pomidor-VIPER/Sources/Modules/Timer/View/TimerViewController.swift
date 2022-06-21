@@ -10,6 +10,7 @@ import UIKit
 protocol TimerViewInput: AnyObject {
     func displayTimerLabel(with title: String)
     func dislpayStartPauseButton(forModeIswork: Bool)
+    func changeStartPauseButtonImage(forStateIsStarted: Bool)
 }
 
 protocol TimerViewOutput: AnyObject {
@@ -56,6 +57,13 @@ extension TimerViewController: TimerViewInput {
 
     func dislpayStartPauseButton(forModeIswork: Bool) {
         timerView?.startPauseButton.tintColor = forModeIswork ? .red : .green
+    }
+
+    func changeStartPauseButtonImage(forStateIsStarted: Bool) {
+        let imageConfig = TimerView.getButtonImageConfig()
+        let image = UIImage(systemName: (forStateIsStarted == true ? "pause" : "play"), withConfiguration: imageConfig)
+
+        timerView?.startPauseButton.setImage(image, for: .normal)
     }
 
 }

@@ -27,7 +27,7 @@ final class TimerView: UIView {
     lazy var startPauseButton: UIButton = {
         let button = UIButton()
         var buttonConfig = UIButton.Configuration.plain()
-        let imageConfig = getButtonImageConfig()
+        let imageConfig = TimerView.getButtonImageConfig()
         let image = UIImage(systemName: "play", withConfiguration: imageConfig)
 
         buttonConfig.image = image
@@ -102,7 +102,7 @@ final class TimerView: UIView {
 //MARK: - Extensions -
 
 extension TimerView {
-    private func getButtonImageConfig() -> UIImage.SymbolConfiguration {
+    static func getButtonImageConfig() -> UIImage.SymbolConfiguration {
         let imageConfig = UIImage.SymbolConfiguration(pointSize: 40, weight: .thin, scale: .default)
 
         return imageConfig

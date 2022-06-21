@@ -10,6 +10,7 @@ import Foundation
 struct TimerData {
     let timerLabel: Int
     let isWorkTime: Bool
+    let isStarted: Bool
 }
 
 class TimerPresenter: TimerViewOutput {
@@ -27,7 +28,8 @@ class TimerPresenter: TimerViewOutput {
     }
 
     func startPauseButtonTapped() {
-        interactor.toggleIsWorkTime()
+//        interactor.toggleIsWorkTime()
+        interactor.toggleIsStarted()
     }
 }
 
@@ -44,5 +46,9 @@ extension TimerPresenter: TimerInteractorOutput {
 
     func receiveTimerMode(isWorkTime: Bool) {
         view.dislpayStartPauseButton(forModeIswork: isWorkTime)
+    }
+
+    func receiveTimerState(isStarted: Bool) {
+        view.changeStartPauseButtonImage(forStateIsStarted: isStarted)
     }
 }
