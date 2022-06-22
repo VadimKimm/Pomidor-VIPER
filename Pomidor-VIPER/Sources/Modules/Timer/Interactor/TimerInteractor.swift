@@ -10,19 +10,22 @@ import Foundation
 protocol TimerInteractorInput: AnyObject {
     var isWorkTime: Bool { get set }
     var isStarted: Bool { get set }
-
+    var isAnimationStarted: Bool { get set }
 
     init(presenter: TimerInteractorOutput)
 
-    func provideTimer()
+    func provideInitializeTimerData()
+    func provideTimerDataForCountDown()
+    func provideData()
     func toggleIsWorkTime()
     func toggleIsStarted()
+    func toggleIsAnimationStarted()
 }
 
 protocol TimerInteractorOutput: AnyObject {
-    func receiveTimer(with timerData: TimerData)
-    func receiveTimerMode(isWorkTime: Bool)
-    func receiveTimerState(isStarted: Bool)
+    func receiveInitializeTimerData(with timerData: TimerData)
+    func receiveTimerDataForCountDown(with timerData: TimerData)
+    func updateInternalData(with timerData: TimerData)
 }
 
 class TimerInteractor: TimerInteractorInput {
@@ -46,26 +49,53 @@ class TimerInteractor: TimerInteractorInput {
         }
     }
 
+    var isAnimationStarted: Bool {
+        get {
+            timer.isAnimationStarted
+        } set {
+            timer.isAnimationStarted.toggle()
+        }
+    }
+
     required init(presenter: TimerInteractorOutput) {
         self.presenter = presenter
         self.timer = TimerEntity()
     }
 
-    func provideTimer() {
-        let timerData = TimerData(timerLabel: timer.workTime,
-                                  isWorkTime: timer.isWorkTime,
-                                  isStarted: timer.isStarted)
-        presenter.receiveTimer(with: timerData)
+    func provideData() {
+        presenter.updateInternalData(with: getDataFromEnity())
+    }
+
+
+    func provideInitializeTimerData() {
+        presenter.receiveInitializeTimerData(with: getDataFromEnity())
+    }
+
+    func provideTimerDataForCountDown() {
+        presenter.receiveTimerDataForCountDown(with: getDataFromEnity())
+    }
+
+    private func getDataFromEnity() -> TimerData  {
+        let timerData = TimerData(isWorkTime: timer.isWorkTime,
+                                            isStarted: timer.isStarted,
+                                            isAnimationStarted: timer.isAnimationStarted,
+                                            workTime: timer.workTime,
+                                            restTime: timer.restTime)
+        return timerData
     }
 
     func toggleIsWorkTime() {
         isWorkTime.toggle()
-        presenter.receiveTimerMode(isWorkTime: isWorkTime)
     }
 
     func toggleIsStarted() {
         isStarted.toggle()
-        presenter.receiveTimerState(isStarted: isStarted)
     }
+
+    func toggleIsAnimationStarted() {
+        isAnimationStarted.toggle()
+    }
+
+
 
 }

@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 protocol AssemplyTimerInput {
-    static func AssembleModule() -> UIViewController
+    static func assembleModule() -> UIViewController
 }
 
 class AssemplyTimer: AssemplyTimerInput {
 
-    static func AssembleModule() -> UIViewController {
+    static func assembleModule() -> UIViewController {
         let viewContoller = TimerViewController()
         let presenter = TimerPresenter(view: viewContoller)
         
@@ -27,5 +27,4 @@ class AssemplyTimer: AssemplyTimerInput {
 
         return viewContoller
     }
-
 }

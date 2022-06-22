@@ -17,7 +17,6 @@ final class TimerView: UIView {
         var label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: Metric.timerLabelTextFont, weight: .thin)
-        label.textColor = .red
         label.adjustsFontSizeToFitWidth = true
         label.minimumScaleFactor = 0.5
 
@@ -43,6 +42,16 @@ final class TimerView: UIView {
         circularProgressBar.translatesAutoresizingMaskIntoConstraints = false
 
         return circularProgressBar
+    }()
+
+    lazy var settingsButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Настройки", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+//        button.layer.cornerRadius = 10
+//        button.backgroundColor = .blue
+
+        return button
     }()
 
     //MARK: - Views -
@@ -80,12 +89,17 @@ final class TimerView: UIView {
     private func setupHierarchy() {
         addSubview(timerStackView)
         addSubview(circularProgressBar)
+        addSubview(settingsButton)
 
         timerStackView.addArrangedSubview(timerLabel)
         timerStackView.addArrangedSubview(startPauseButton)
     }
 
     private func setupLayout() {
+        settingsButton.translatesAutoresizingMaskIntoConstraints = false
+        settingsButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        settingsButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 150).isActive = true
+
         timerStackView.translatesAutoresizingMaskIntoConstraints = false
         timerStackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         timerStackView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
@@ -107,7 +121,7 @@ extension TimerView {
 
         return imageConfig
     }
-    
+
 }
 
 extension TimerView {
