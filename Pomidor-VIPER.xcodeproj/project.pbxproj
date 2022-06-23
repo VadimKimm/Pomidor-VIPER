@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DD88924828645A1600757D01 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88924728645A1600757D01 /* SettingsViewController.swift */; };
 		DD88924A28645A4A00757D01 /* SelectedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88924928645A4A00757D01 /* SelectedButton.swift */; };
+		DD88924C28645A7D00757D01 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88924B28645A7D00757D01 /* SettingsPresenter.swift */; };
 		DD9C32022862150000DB1147 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C32012862150000DB1147 /* TimerViewController.swift */; };
 		DD9C3204286215E700DB1147 /* AssemplyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C3203286215E700DB1147 /* AssemplyTimer.swift */; };
 		DD9C320628621A0D00DB1147 /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320528621A0D00DB1147 /* TimerPresenter.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		DD88924728645A1600757D01 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DD88924928645A4A00757D01 /* SelectedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedButton.swift; sourceTree = "<group>"; };
+		DD88924B28645A7D00757D01 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		DD9C32012862150000DB1147 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		DD9C3203286215E700DB1147 /* AssemplyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemplyTimer.swift; sourceTree = "<group>"; };
 		DD9C320528621A0D00DB1147 /* TimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		DD889244286459B700757D01 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DD88924B28645A7D00757D01 /* SettingsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				DD9C320C28621D1800DB1147 /* TimerRouter.swift in Sources */,
 				DD88924A28645A4A00757D01 /* SelectedButton.swift in Sources */,
 				DD9C3204286215E700DB1147 /* AssemplyTimer.swift in Sources */,
+				DD88924C28645A7D00757D01 /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
