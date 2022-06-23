@@ -27,7 +27,10 @@ final class TimerView: UIView {
         let button = UIButton()
         var buttonConfig = UIButton.Configuration.plain()
         let imageConfig = TimerView.getButtonImageConfig()
-        let image = UIImage(systemName: "play", withConfiguration: imageConfig)
+        let image = UIImage(systemName: "play",
+                            withConfiguration: imageConfig)?.withTintColor(
+                                UIColor.link.withAlphaComponent(0.7),
+                                renderingMode: .alwaysOriginal)
 
         buttonConfig.image = image
 
@@ -47,9 +50,9 @@ final class TimerView: UIView {
     lazy var settingsButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Настройки", for: .normal)
-        button.setTitleColor(UIColor.black, for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
 //        button.layer.cornerRadius = 10
-//        button.backgroundColor = .blue
+        button.backgroundColor = .darkGray
 
         return button
     }()
@@ -79,7 +82,7 @@ final class TimerView: UIView {
     }
 
     private func commonInit() {
-        backgroundColor = .white
+        backgroundColor = .lightGray
         setupHierarchy()
         setupLayout()
     }

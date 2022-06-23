@@ -59,12 +59,12 @@ class TimerViewController: UIViewController {
 extension TimerViewController: TimerViewInput {
 
     func displayTimerLabel(with title: String, forModeIswork: Bool) {
-        timerView?.timerLabel.textColor = forModeIswork ? .red : .green
+        timerView?.timerLabel.textColor = forModeIswork ? UIColor.systemRed.withAlphaComponent(0.7) : UIColor.systemGreen.withAlphaComponent(0.7)
         timerView?.timerLabel.text = title
     }
     
     func displayStartPauseButton(forModeIswork: Bool, andStateIsStarted: Bool) {
-        timerView?.startPauseButton.tintColor = forModeIswork ? .red : .green
+        timerView?.startPauseButton.tintColor = forModeIswork ? .systemRed.withAlphaComponent(0.7) : .systemGreen.withAlphaComponent(0.7)
 
         let imageConfig = TimerView.getButtonImageConfig()
         let image = UIImage(systemName: andStateIsStarted ? "pause" : "play",
@@ -75,9 +75,9 @@ extension TimerViewController: TimerViewInput {
 
     func displayCircularProgressBar(forModeIswork: Bool) {
         if forModeIswork {
-            timerView?.circularProgressBar.changeCircularPathColor(to: UIColor.red.cgColor)
+            timerView?.circularProgressBar.changeCircularPathColor(to: UIColor.systemRed.withAlphaComponent(0.7).cgColor)
         } else {
-            timerView?.circularProgressBar.changeCircularPathColor(to: UIColor.green.cgColor)
+            timerView?.circularProgressBar.changeCircularPathColor(to: UIColor.systemGreen.withAlphaComponent(0.7).cgColor)
         }
     }
 

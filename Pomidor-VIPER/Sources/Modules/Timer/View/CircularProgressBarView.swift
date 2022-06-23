@@ -41,7 +41,7 @@ class CircularProgressBarView: UIView {
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.lineWidth = 2.0
         circleLayer.strokeEnd = 1.0
-        circleLayer.strokeColor = UIColor.red.cgColor
+        circleLayer.strokeColor = UIColor.systemRed.withAlphaComponent(0.7).cgColor
         layer.addSublayer(circleLayer)
 
         // settings of animation path
@@ -49,7 +49,7 @@ class CircularProgressBarView: UIView {
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.lineWidth = 5.0
         progressLayer.strokeEnd = 0
-        progressLayer.strokeColor = UIColor.red.cgColor
+        progressLayer.strokeColor = UIColor.systemRed.withAlphaComponent(0.7).cgColor
         layer.addSublayer(progressLayer)
         }
 

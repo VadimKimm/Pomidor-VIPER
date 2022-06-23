@@ -10,15 +10,15 @@ class SettingsPresenter: SettingsViewOutputProtocol {
     unowned var view: SettingsViewInputProtocol
     var interactor: SettingsInteractorInputProtocol!
     var router: SettingsRouter!
-
-    var isShortDuration = Bool()
+    
 //    MARK: - Initilizer
     required init(view: SettingsViewInputProtocol) {
         self.view = view
     }
 //    MARK: - Functions
     func didTapSaveNewDurationButton() {
-        router.openTimerViewControllerAndSendData(workTime: 4, restTime: 2)
+        router.openTimerViewControllerAndSendData(workTime: savedDurations.workDuration,
+                                                  restTime: savedDurations.restDuration)
     }
 
     func tapChoseShortDuration() {
@@ -32,10 +32,7 @@ class SettingsPresenter: SettingsViewOutputProtocol {
 // MARK: - Extension
 extension SettingsPresenter: SettingsInteractorOutputProtocol {
     func receiveDurationData(durationData: Bool) {
-        isShortDuration = durationData
-
         let mode = durationData ? "25 минут : 5 минут" : "50 минут : 10 минут"
-
         let durationModeString = "Выбран режим \(mode)"
 
         view.changeDuration(durationModeString)
