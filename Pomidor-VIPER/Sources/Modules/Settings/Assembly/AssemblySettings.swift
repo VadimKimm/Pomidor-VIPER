@@ -8,12 +8,12 @@
 import UIKit
 
 protocol AssemblySettingsInputs {
-    func AssemblyModule(with view: SettingsViewController)
+    func assemblyModule(with view: SettingsViewController)
 }
 
 class AssemblySettings: AssemblySettingsInputs {
 
-    func AssemblyModule(with view: SettingsViewController) {
+    func assemblyModule(with view: SettingsViewController) {
         let presenter = SettingsPresenter(view: view)
         let interactor = SettingsInteractor(presenter: presenter)
         let router = SettingsRouter(viewController: view)

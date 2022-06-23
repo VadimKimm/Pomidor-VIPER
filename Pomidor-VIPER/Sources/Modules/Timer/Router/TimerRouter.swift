@@ -21,6 +21,7 @@ class TimerRouter: TimerRouterInput {
     
 
     func openSettingsViewConroller() {
-        
+        let settingsViewController = SettingsViewController()
+        viewController.present(settingsViewController, animated: true)
     }
 }

@@ -118,7 +118,7 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        assembly.AssemblyModule(with: self)
+        assembly.assemblyModule(with: self)
 
         setupHierarchy()
         setupLayout()
