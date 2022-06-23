@@ -124,7 +124,6 @@ extension TimerView {
 
         return imageConfig
     }
-
 }
 
 extension TimerView {

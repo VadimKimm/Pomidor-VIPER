@@ -7,26 +7,24 @@
 
 import UIKit
 
-protocol SettingsRouterInput {
+protocol SettingsRouterInput: AnyObject {
     init(viewController: SettingsViewController)
     func openTimerViewControllerAndSendData(workTime: Int, restTime: Int)
     static func openSettingsViewController() -> UIViewController
-}
-
-protocol SettingsRouterToTimerRouterOutput {
-    static func receiveDataFromSettingsRouter(workTime: Int, restTime: Int)
 }
 
 class SettingsRouter: SettingsRouterInput {
 
     unowned let viewController: SettingsViewController
 
+    var timerRouter: SettingsRouterToTimerRouterOutput!
+
     required init(viewController: SettingsViewController) {
         self.viewController = viewController
     }
 
     func openTimerViewControllerAndSendData(workTime: Int, restTime: Int) {
-        TimerRouter.receiveDataFromSettingsRouter(workTime: workTime, restTime: restTime)
+//        timerRouter.receiveDataFromSettingsRouter(workTime: workTime, restTime: restTime)
         viewController.dismiss(animated: true)
     }
 

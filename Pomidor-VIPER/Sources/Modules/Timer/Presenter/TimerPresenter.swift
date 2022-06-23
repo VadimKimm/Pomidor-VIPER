@@ -19,7 +19,7 @@ class TimerPresenter: TimerViewOutput {
 
     unowned let view: TimerViewInput
     var interactor: TimerInteractorInput!
-    var router: TimerRouter!
+    var router: TimerRouterInput!
 
     private var timer = Timer()
     private var counter = 0.0
@@ -59,7 +59,7 @@ class TimerPresenter: TimerViewOutput {
     }
 
     func settingsButtonTapped() {
-        router.openSettingsViewConroller()
+        router.openSettingsViewController()
     }
 
 }
@@ -108,6 +108,14 @@ extension TimerPresenter: TimerInteractorOutput {
         isAnimationStarted = timerData.isAnimationStarted
         workTime = timerData.workTime
         restTime = timerData.restTime
+    }
+}
+
+//MARK: - TimerRouterOutput -
+extension TimerPresenter: TimerRouterOutput {
+    func getNewTimerSettings(workTime: Int, restTime: Int) {
+        interactor.changeTimerSettings(workTime: workTime, restTime: restTime)
+        getDataForInitializeTimer()
     }
 }
 

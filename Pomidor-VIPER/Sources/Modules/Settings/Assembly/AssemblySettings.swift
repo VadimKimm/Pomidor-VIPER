@@ -21,5 +21,7 @@ class AssemblySettings: AssemblySettingsInputs {
         view.presenter = presenter
         presenter.interactor = interactor
         presenter.router = router
+
+//        router.timerRouter = Timer
     }
 }

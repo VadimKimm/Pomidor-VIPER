@@ -10,6 +10,6 @@ import UIKit
 class RootRouter {
     func presentViewContoller(in window: UIWindow) {
         window.makeKeyAndVisible()
-        window.rootViewController = AssemplyTimer.assembleModule()
+        window.rootViewController = AssemblyTimer.assembleModule()
     }
 }

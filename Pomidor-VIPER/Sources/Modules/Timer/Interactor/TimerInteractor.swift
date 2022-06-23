@@ -11,6 +11,8 @@ protocol TimerInteractorInput: AnyObject {
     var isWorkTime: Bool { get set }
     var isStarted: Bool { get set }
     var isAnimationStarted: Bool { get set }
+    var workTime: Int { get set}
+    var restTime: Int { get set}
 
     init(presenter: TimerInteractorOutput)
 
@@ -20,6 +22,7 @@ protocol TimerInteractorInput: AnyObject {
     func toggleIsWorkTime()
     func toggleIsStarted()
     func toggleIsAnimationStarted()
+    func changeTimerSettings(workTime: Int, restTime: Int)
 }
 
 protocol TimerInteractorOutput: AnyObject {
@@ -57,6 +60,22 @@ class TimerInteractor: TimerInteractorInput {
         }
     }
 
+    var workTime: Int {
+        get {
+            timer.workTime
+        } set {
+            timer.workTime = newValue
+        }
+    }
+
+    var restTime: Int {
+        get {
+            timer.restTime
+        } set {
+            timer.restTime = newValue
+        }
+    }
+
     required init(presenter: TimerInteractorOutput) {
         self.presenter = presenter
         self.timer = TimerEntity()
@@ -65,7 +84,6 @@ class TimerInteractor: TimerInteractorInput {
     func provideData() {
         presenter.updateInternalData(with: getDataFromEnity())
     }
-
 
     func provideInitializeTimerData() {
         presenter.receiveInitializeTimerData(with: getDataFromEnity())
@@ -96,6 +114,8 @@ class TimerInteractor: TimerInteractorInput {
         isAnimationStarted.toggle()
     }
 
-
-
+    func changeTimerSettings(workTime: Int, restTime: Int) {
+        self.workTime = workTime
+        self.restTime = restTime
+    }
 }

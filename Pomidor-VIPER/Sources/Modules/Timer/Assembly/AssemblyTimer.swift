@@ -8,21 +8,23 @@
 import Foundation
 import UIKit
 
-protocol AssemplyTimerInput {
+protocol AssemblyTimerInput {
     static func assembleModule() -> UIViewController
 }
 
-class AssemplyTimer: AssemplyTimerInput {
+class AssemblyTimer: AssemblyTimerInput {
 
     static func assembleModule() -> UIViewController {
         let viewContoller = TimerViewController()
         let presenter = TimerPresenter(view: viewContoller)
         let interactor = TimerInteractor(presenter: presenter)
-        let router = TimerRouter(viewController: viewContoller)
+        let router = TimerRouter(viewController: viewContoller, presenter: presenter)
 
         viewContoller.presenter = presenter
         presenter.interactor = interactor
         presenter.router = router
+
+//        router.presenter = presenter
 
         return viewContoller
     }
