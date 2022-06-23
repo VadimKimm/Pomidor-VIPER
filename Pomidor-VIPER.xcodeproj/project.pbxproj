@@ -63,6 +63,48 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		DD889241286459A200757D01 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		DD889242286459AA00757D01 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DD889243286459B000757D01 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DD889244286459B700757D01 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DD889245286459BC00757D01 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DD889246286459C300757D01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DD9C32112862366100DB1147 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +236,12 @@
 		DDB391F62861B501005F2DC9 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				DD889246286459C300757D01 /* View */,
+				DD889245286459BC00757D01 /* Interactor */,
+				DD889244286459B700757D01 /* Presenter */,
+				DD889243286459B000757D01 /* Entity */,
+				DD889242286459AA00757D01 /* Router */,
+				DD889241286459A200757D01 /* Assembly */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
