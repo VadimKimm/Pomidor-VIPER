@@ -30,21 +30,21 @@ class TimerPresenter: TimerViewOutput {
     private var workTime = 0
     private var restTime = 0
 
-    private lazy var workTimeInSeconds: Double = {
+    var workTimeInSeconds: Double {
         Double(workTime * 60)
-    }()
+    }
 
-    private lazy var restTimeInSeconds: Double = {
+    var restTimeInSeconds: Double {
         Double(restTime * 60)
-    }()
+    }
 
-    private lazy var timerLabelTextForWork: String = {
+    var timerLabelTextForWork: String {
         String("\(workTime < 10 ? "0\(workTime):00" : "\(workTime):00")")
-    }()
+    }
 
-    private lazy var timerLabelTextForRest: String = {
+    var timerLabelTextForRest: String {
         String("\(restTime < 10 ? "0\(restTime):00" : "\(restTime):00")")
-    }()
+    }
 
     required init(view: TimerViewInput) {
         self.view = view
@@ -62,6 +62,16 @@ class TimerPresenter: TimerViewOutput {
         router.openSettingsViewController()
     }
 
+    func resetButtonTapped() {
+        interactor.isStarted = false
+        interactor.isWorkTime = true
+        interactor.isAnimationStarted = false
+
+        timer.invalidate()
+        getDataForInitializeTimer()
+        view.resetCircularProgressBarAnimation()
+        counter = 0
+    }
 }
 
 //MARK: - TimerInteractorOutput -
@@ -111,14 +121,6 @@ extension TimerPresenter: TimerInteractorOutput {
     }
 }
 
-//MARK: - TimerRouterOutput -
-extension TimerPresenter: TimerRouterOutput {
-    func getNewTimerSettings(workTime: Int, restTime: Int) {
-        interactor.changeTimerSettings(workTime: workTime, restTime: restTime)
-        getDataForInitializeTimer()
-    }
-}
-
 //MARK: - TimerCountdown -
 extension TimerPresenter {
     @objc func startTimer() {
@@ -150,10 +152,6 @@ extension TimerPresenter {
         interactor.toggleIsWorkTime()
         interactor.toggleIsAnimationStarted()
 
-        interactor.provideData()
-
-        view.displayTimerLabel(with: isWorkTime ? timerLabelTextForWork : timerLabelTextForRest, forModeIswork: isWorkTime)
-        view.displayStartPauseButton(forModeIswork: isWorkTime, andStateIsStarted: isStarted)
-        view.displayCircularProgressBar(forModeIswork: isWorkTime)
+        getDataForInitializeTimer()
     }
 }

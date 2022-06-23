@@ -17,8 +17,7 @@ class SettingsPresenter: SettingsViewOutputProtocol {
     }
 //    MARK: - Functions
     func didTapSaveNewDurationButton() {
-        router.openTimerViewControllerAndSendData(workTime: savedDurations.workDuration,
-                                                  restTime: savedDurations.restDuration)
+        router.openTimerViewController()
     }
 
     func tapChoseShortDuration() {

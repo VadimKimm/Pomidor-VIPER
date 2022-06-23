@@ -12,6 +12,7 @@ protocol TimerViewInput: AnyObject {
     func displayStartPauseButton(forModeIswork: Bool, andStateIsStarted: Bool)
     func displayCircularProgressBar(forModeIswork: Bool)
     func changeCircularProgressBarAnimation(isAnimationStarted: Bool, isWorkTime: Bool, workTime: Double, restTime: Double)
+    func resetCircularProgressBarAnimation()
 }
 
 protocol TimerViewOutput: AnyObject {
@@ -19,6 +20,7 @@ protocol TimerViewOutput: AnyObject {
     func getDataForInitializeTimer()
     func startPauseButtonTapped()
     func settingsButtonTapped()
+    func resetButtonTapped()
 }
 
 class TimerViewController: UIViewController {
@@ -41,6 +43,7 @@ class TimerViewController: UIViewController {
                                               action: #selector(startPauseButtonTapped),
                                               for: .touchUpInside)
         timerView?.settingsButton.addTarget(self, action: #selector(settingsButtonTapped), for: .touchUpInside)
+        timerView?.resetButton.addTarget(self, action: #selector(resetButtonTapped), for: .touchUpInside)
 
     }
 
@@ -52,6 +55,10 @@ class TimerViewController: UIViewController {
 
     @objc func settingsButtonTapped(sender: UIButton) {
         presenter.settingsButtonTapped()
+    }
+
+    @objc func resetButtonTapped(sender: UIButton) {
+        presenter.resetButtonTapped()
     }
 }
 
@@ -87,5 +94,9 @@ extension TimerViewController: TimerViewInput {
         } else {
             timerView?.circularProgressBar.startAnimation(duration: isWorkTime ? workTime : restTime)
         }
+    }
+
+    func resetCircularProgressBarAnimation() {
+        timerView?.circularProgressBar.stopProgressBarAnimation()
     }
 }

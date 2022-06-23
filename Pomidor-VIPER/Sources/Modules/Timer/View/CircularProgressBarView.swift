@@ -20,7 +20,7 @@ class CircularProgressBarView: UIView {
     //uses for pause and resume animation of circle
     private var isAnimationPaused = true
 
-    private lazy var circularPath: UIBezierPath = {
+    lazy var circularPath: UIBezierPath = {
         let circularPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: 120, startAngle: startPoint, endAngle: endPoint, clockwise: true)
         return circularPath
     }()
@@ -39,7 +39,7 @@ class CircularProgressBarView: UIView {
         // settings of circle
         circleLayer.path = circularPath.cgPath
         circleLayer.fillColor = UIColor.clear.cgColor
-        circleLayer.lineWidth = 2.0
+        circleLayer.lineWidth = 4.0
         circleLayer.strokeEnd = 1.0
         circleLayer.strokeColor = UIColor.systemRed.withAlphaComponent(0.7).cgColor
         layer.addSublayer(circleLayer)
@@ -47,7 +47,7 @@ class CircularProgressBarView: UIView {
         // settings of animation path
         progressLayer.path = circularPath.cgPath
         progressLayer.fillColor = UIColor.clear.cgColor
-        progressLayer.lineWidth = 5.0
+        progressLayer.lineWidth = 20.0
         progressLayer.strokeEnd = 0
         progressLayer.strokeColor = UIColor.systemRed.withAlphaComponent(0.7).cgColor
         layer.addSublayer(progressLayer)
@@ -58,12 +58,10 @@ class CircularProgressBarView: UIView {
         circularProgressAnimation.fromValue = 0
         circularProgressAnimation.toValue = 1
         circularProgressAnimation.fillMode = .backwards
-        circularProgressAnimation.isRemovedOnCompletion = false
         progressLayer.add(circularProgressAnimation, forKey: "progressAnim")
 
         isAnimationPaused = false
-        }
-
+    }
 
     func changeCircularPathColor(to color: CGColor) {
         progressLayer.strokeColor = color
@@ -95,6 +93,11 @@ class CircularProgressBarView: UIView {
         }
 
         isAnimationPaused.toggle()
+    }
+
+    func stopProgressBarAnimation() {
+        progressLayer.removeAllAnimations()
+        isAnimationPaused = true
     }
 }
 

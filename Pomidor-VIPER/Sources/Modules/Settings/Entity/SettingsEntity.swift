@@ -9,11 +9,11 @@ enum DurationData {
     case short
     case long
     
-    static let shortWorkTime = 1500
-    static let shortRestTime = 300
+    static let shortWorkTime = 25
+    static let shortRestTime = 5
     
-    static let longWorkTime = 3000
-    static let longRestTime = 600
+    static let longWorkTime = 50
+    static let longRestTime = 10
 }
 
 struct Durations {
@@ -21,4 +21,4 @@ struct Durations {
     var restDuration: Int
 }
 
-var savedDurations = Durations.init(workDuration: 1500, restDuration: 300)
+var savedDurations = Durations.init(workDuration: 25, restDuration: 5)

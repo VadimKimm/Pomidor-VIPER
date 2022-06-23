@@ -33,13 +33,13 @@ class SettingsInteractor: SettingsInteractorInputProtocol {
         case .short:
             newDurationData = true
             
-            savedDurations.workDuration = DurationData.shortWorkTime
-            savedDurations.restDuration = DurationData.shortRestTime
+            TimerEntity.timer.workTime = DurationData.shortWorkTime
+            TimerEntity.timer.restTime = DurationData.shortRestTime
         case .long:
             newDurationData = false
             
-            savedDurations.workDuration = DurationData.longWorkTime
-            savedDurations.restDuration = DurationData.longRestTime
+            TimerEntity.timer.workTime = DurationData.longWorkTime
+            TimerEntity.timer.restTime = DurationData.longRestTime
         }
         
         presenter.receiveDurationData(durationData: newDurationData)

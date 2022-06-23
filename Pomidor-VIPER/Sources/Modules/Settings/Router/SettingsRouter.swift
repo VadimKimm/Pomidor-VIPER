@@ -9,7 +9,7 @@ import UIKit
 
 protocol SettingsRouterInput: AnyObject {
     init(viewController: SettingsViewController)
-    func openTimerViewControllerAndSendData(workTime: Int, restTime: Int)
+    func openTimerViewController()
     static func openSettingsViewController() -> UIViewController
 }
 
@@ -17,14 +17,13 @@ class SettingsRouter: SettingsRouterInput {
 
     unowned let viewController: SettingsViewController
 
-    var timerRouter: SettingsRouterToTimerRouterOutput!
+    var timerRouter: TimerRouter!
 
     required init(viewController: SettingsViewController) {
         self.viewController = viewController
     }
 
-    func openTimerViewControllerAndSendData(workTime: Int, restTime: Int) {
-//        timerRouter.receiveDataFromSettingsRouter(workTime: workTime, restTime: restTime)
+    func openTimerViewController() {
         viewController.dismiss(animated: true)
     }
 

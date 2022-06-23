@@ -40,7 +40,7 @@ final class TimerView: UIView {
         return button
     }()
 
-    lazy var circularProgressBar: CircularProgressBarView = {
+    var circularProgressBar: CircularProgressBarView = {
         let circularProgressBar = CircularProgressBarView(frame: .zero)
         circularProgressBar.translatesAutoresizingMaskIntoConstraints = false
 
@@ -48,10 +48,22 @@ final class TimerView: UIView {
     }()
 
     lazy var settingsButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Настройки", for: .normal)
+        let button = UIButton()
+        button.setTitle(Metric.settingsButtonLabelText, for: .normal)
         button.setTitleColor(UIColor.white, for: .normal)
-//        button.layer.cornerRadius = 10
+        button.titleLabel?.font = .systemFont(ofSize: Metric.settingsButtonFontSize, weight: .medium)
+        button.layer.cornerRadius = 10
+        button.backgroundColor = .darkGray
+
+        return button
+    }()
+
+    lazy var resetButton: UIButton = {
+        let button = UIButton()
+        button.setTitle(Metric.resetButtonLabelText, for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: Metric.resetButtonFontSize, weight: .medium)
+        button.layer.cornerRadius = 10
         button.backgroundColor = .darkGray
 
         return button
@@ -93,6 +105,7 @@ final class TimerView: UIView {
         addSubview(timerStackView)
         addSubview(circularProgressBar)
         addSubview(settingsButton)
+        addSubview(resetButton)
 
         timerStackView.addArrangedSubview(timerLabel)
         timerStackView.addArrangedSubview(startPauseButton)
@@ -100,8 +113,14 @@ final class TimerView: UIView {
 
     private func setupLayout() {
         settingsButton.translatesAutoresizingMaskIntoConstraints = false
-        settingsButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        settingsButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: 150).isActive = true
+        settingsButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: Metric.settingsButtonXOffset).isActive = true
+        settingsButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: Metric.settingsButtonYOffset).isActive = true
+        settingsButton.widthAnchor.constraint(equalToConstant: 130).isActive = true
+
+        resetButton.translatesAutoresizingMaskIntoConstraints = false
+        resetButton.centerXAnchor.constraint(equalTo: centerXAnchor, constant: Metric.resetButtonXOffset).isActive = true
+        resetButton.centerYAnchor.constraint(equalTo: centerYAnchor, constant: Metric.resetButtonYOffset).isActive = true
+        resetButton.widthAnchor.constraint(equalToConstant: 130).isActive = true
 
         timerStackView.translatesAutoresizingMaskIntoConstraints = false
         timerStackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
@@ -121,7 +140,6 @@ final class TimerView: UIView {
 extension TimerView {
     static func getButtonImageConfig() -> UIImage.SymbolConfiguration {
         let imageConfig = UIImage.SymbolConfiguration(pointSize: 40, weight: .thin, scale: .default)
-
         return imageConfig
     }
 }
@@ -135,5 +153,17 @@ extension TimerView {
         static let parentViewHeightMultiplier: CGFloat = 2 / 3
 
         static let timerStackViewHeightMultiplier: CGFloat = 2 / 5
+
+        static let settingsButtonXOffset: CGFloat = -70
+        static let settingsButtonYOffset: CGFloat = 170
+
+        static let resetButtonXOffset: CGFloat = 70
+        static let resetButtonYOffset: CGFloat = 170
+
+        static let settingsButtonFontSize: CGFloat = 18
+        static let resetButtonFontSize: CGFloat = 18
+
+        static let settingsButtonLabelText = "Настройки"
+        static let resetButtonLabelText = "Сбросить"
     }
 }

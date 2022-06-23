@@ -8,37 +8,23 @@
 import UIKit
 
 protocol TimerRouterInput: AnyObject {
-    init(viewController: TimerViewController, presenter: TimerRouterOutput)
+    init(viewController: TimerViewController)
     func openSettingsViewController()
 }
 
-protocol TimerRouterOutput: AnyObject {
-    func getNewTimerSettings(workTime: Int, restTime: Int)
-}
-
-protocol SettingsRouterToTimerRouterOutput: AnyObject {
+protocol SettingsModuleOutput: AnyObject {
     func receiveDataFromSettingsRouter(workTime: Int, restTime: Int)
 }
 
 class TimerRouter: TimerRouterInput {
 
     unowned let viewController: TimerViewController
-    unowned let presenter: TimerRouterOutput
 
-    required init(viewController: TimerViewController, presenter: TimerRouterOutput) {
+    required init(viewController: TimerViewController) {
         self.viewController = viewController
-        self.presenter = presenter
     }
 
     func openSettingsViewController() {
         viewController.present(SettingsRouter.openSettingsViewController(), animated: true)
     }
-}
-
-//MARK: - SettingsRouterToTimerRouterOutput -
-extension TimerRouter {
-    func receiveDataFromSettingsRouter(workTime: Int, restTime: Int) {
-        presenter.getNewTimerSettings(workTime: workTime, restTime: restTime)
-    }
-
 }

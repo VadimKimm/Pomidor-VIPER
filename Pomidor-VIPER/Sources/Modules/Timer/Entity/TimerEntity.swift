@@ -15,10 +15,12 @@ protocol TimerModel {
     var restTime: Int { get set }
 }
 
-struct TimerEntity: TimerModel {
+class TimerEntity: TimerModel {
     var isWorkTime = true
     var isStarted = false
     var isAnimationStarted = false
     var workTime = 2
     var restTime = 1
+
+    static var timer = TimerEntity()
 }
