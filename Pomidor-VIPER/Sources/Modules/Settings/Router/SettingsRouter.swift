@@ -10,7 +10,7 @@ import UIKit
 protocol SettingsRouterInput {
     init(viewController: SettingsViewController)
     func openTimerViewController()
-    func openSettingsViewController() -> UIViewController
+    static func openSettingsViewController() -> UIViewController
 }
 
 class SettingsRouter: SettingsRouterInput {
@@ -21,11 +21,11 @@ class SettingsRouter: SettingsRouterInput {
     }
 
     func openTimerViewController() {
-
+        viewController.dismiss(animated: true)
     }
 
-    func openSettingsViewController() -> UIViewController {
-        return viewController
+   static func openSettingsViewController() -> UIViewController {
+        return SettingsViewController()
     }
 
 

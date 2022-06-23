@@ -5,11 +5,12 @@
 //  Created by Vadim Kim on 21.06.2022.
 //
 
-import Foundation
+import UIKit
 
 protocol TimerRouterInput {
     init(viewController: TimerViewController)
     func openSettingsViewConroller()
+    static func openTimerViewController() -> UIViewController
 }
 
 class TimerRouter: TimerRouterInput {
@@ -18,10 +19,12 @@ class TimerRouter: TimerRouterInput {
     required init(viewController: TimerViewController) {
         self.viewController = viewController
     }
-    
 
     func openSettingsViewConroller() {
-        let settingsViewController = SettingsViewController()
-        viewController.present(settingsViewController, animated: true)
+        viewController.present(SettingsRouter.openSettingsViewController(), animated: true)
+    }
+
+    static func openTimerViewController() -> UIViewController {
+        return TimerViewController()
     }
 }
