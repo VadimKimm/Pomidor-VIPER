@@ -55,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD889240286458F500757D01 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				DD9C3203286215E700DB1147 /* AssemplyTimer.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
 		DD9C32112862366100DB1147 /* Root */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +114,7 @@
 				DDB391F02861B38D005F2DC9 /* Presenter */,
 				DDB391F12861B398005F2DC9 /* Entity */,
 				DDB391F22861B3A6005F2DC9 /* Router */,
-				DD9C3203286215E700DB1147 /* AssemplyTimer.swift */,
+				DD889240286458F500757D01 /* Assembly */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
