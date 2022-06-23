@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD88924828645A1600757D01 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88924728645A1600757D01 /* SettingsViewController.swift */; };
 		DD9C32022862150000DB1147 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C32012862150000DB1147 /* TimerViewController.swift */; };
 		DD9C3204286215E700DB1147 /* AssemplyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C3203286215E700DB1147 /* AssemplyTimer.swift */; };
 		DD9C320628621A0D00DB1147 /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320528621A0D00DB1147 /* TimerPresenter.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD88924728645A1600757D01 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DD9C32012862150000DB1147 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		DD9C3203286215E700DB1147 /* AssemplyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemplyTimer.swift; sourceTree = "<group>"; };
 		DD9C320528621A0D00DB1147 /* TimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 		DD889246286459C300757D01 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DD88924728645A1600757D01 /* SettingsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				DDB391D928607DEE005F2DC9 /* AppDelegate.swift in Sources */,
 				DDB391DB28607DEE005F2DC9 /* SceneDelegate.swift in Sources */,
 				DD9C32102862239C00DB1147 /* CircularProgressBarView.swift in Sources */,
+				DD88924828645A1600757D01 /* SettingsViewController.swift in Sources */,
 				DD9C320C28621D1800DB1147 /* TimerRouter.swift in Sources */,
 				DD9C3204286215E700DB1147 /* AssemplyTimer.swift in Sources */,
 			);
