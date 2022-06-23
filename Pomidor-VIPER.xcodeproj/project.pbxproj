@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD9C32022862150000DB1147 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C32012862150000DB1147 /* TimerViewController.swift */; };
+		DD9C3204286215E700DB1147 /* AssemplyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C3203286215E700DB1147 /* AssemplyTimer.swift */; };
+		DD9C320628621A0D00DB1147 /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320528621A0D00DB1147 /* TimerPresenter.swift */; };
+		DD9C320828621A9600DB1147 /* TimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320728621A9600DB1147 /* TimerInteractor.swift */; };
+		DD9C320A28621CEB00DB1147 /* TimerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320928621CEB00DB1147 /* TimerEntity.swift */; };
+		DD9C320C28621D1800DB1147 /* TimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320B28621D1800DB1147 /* TimerRouter.swift */; };
+		DD9C320E286221EE00DB1147 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320D286221EE00DB1147 /* TimerView.swift */; };
+		DD9C32102862239C00DB1147 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320F2862239C00DB1147 /* CircularProgressBarView.swift */; };
+		DD9C32142862367B00DB1147 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C32132862367B00DB1147 /* RootRouter.swift */; };
 		DDB391D928607DEE005F2DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB391D828607DEE005F2DC9 /* AppDelegate.swift */; };
 		DDB391DB28607DEE005F2DC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB391DA28607DEE005F2DC9 /* SceneDelegate.swift */; };
 		DDB391DD28607DEE005F2DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB391DC28607DEE005F2DC9 /* ViewController.swift */; };
@@ -16,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD9C32012862150000DB1147 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		DD9C3203286215E700DB1147 /* AssemplyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemplyTimer.swift; sourceTree = "<group>"; };
+		DD9C320528621A0D00DB1147 /* TimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
+		DD9C320728621A9600DB1147 /* TimerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInteractor.swift; sourceTree = "<group>"; };
+		DD9C320928621CEB00DB1147 /* TimerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntity.swift; sourceTree = "<group>"; };
+		DD9C320B28621D1800DB1147 /* TimerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRouter.swift; sourceTree = "<group>"; };
+		DD9C320D286221EE00DB1147 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		DD9C320F2862239C00DB1147 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
+		DD9C32132862367B00DB1147 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		DDB391D528607DEE005F2DC9 /* Pomidor-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pomidor-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB391D828607DEE005F2DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB391DA28607DEE005F2DC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD9C32112862366100DB1147 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				DD9C32132862367B00DB1147 /* RootRouter.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		DDB391CC28607DEE005F2DC9 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +91,7 @@
 		DDB391EC2861B342005F2DC9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				DD9C32112862366100DB1147 /* Root */,
 				DDB391ED2861B34B005F2DC9 /* Timer */,
 				DDB391F62861B501005F2DC9 /* Settings */,
 			);
@@ -79,6 +106,7 @@
 				DDB391F02861B38D005F2DC9 /* Presenter */,
 				DDB391F12861B398005F2DC9 /* Entity */,
 				DDB391F22861B3A6005F2DC9 /* Router */,
+				DD9C3203286215E700DB1147 /* AssemplyTimer.swift */,
 			);
 			path = Timer;
 			sourceTree = "<group>";
@@ -86,6 +114,9 @@
 		DDB391EE2861B363005F2DC9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DD9C32012862150000DB1147 /* TimerViewController.swift */,
+				DD9C320D286221EE00DB1147 /* TimerView.swift */,
+				DD9C320F2862239C00DB1147 /* CircularProgressBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -93,6 +124,7 @@
 		DDB391EF2861B36A005F2DC9 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				DD9C320728621A9600DB1147 /* TimerInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -100,6 +132,7 @@
 		DDB391F02861B38D005F2DC9 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DD9C320528621A0D00DB1147 /* TimerPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -107,6 +140,7 @@
 		DDB391F12861B398005F2DC9 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				DD9C320928621CEB00DB1147 /* TimerEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -114,6 +148,7 @@
 		DDB391F22861B3A6005F2DC9 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				DD9C320B28621D1800DB1147 /* TimerRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -226,9 +261,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD9C320E286221EE00DB1147 /* TimerView.swift in Sources */,
+				DD9C320828621A9600DB1147 /* TimerInteractor.swift in Sources */,
+				DD9C32022862150000DB1147 /* TimerViewController.swift in Sources */,
+				DD9C320A28621CEB00DB1147 /* TimerEntity.swift in Sources */,
+				DD9C32142862367B00DB1147 /* RootRouter.swift in Sources */,
 				DDB391DD28607DEE005F2DC9 /* ViewController.swift in Sources */,
+				DD9C320628621A0D00DB1147 /* TimerPresenter.swift in Sources */,
 				DDB391D928607DEE005F2DC9 /* AppDelegate.swift in Sources */,
 				DDB391DB28607DEE005F2DC9 /* SceneDelegate.swift in Sources */,
+				DD9C32102862239C00DB1147 /* CircularProgressBarView.swift in Sources */,
+				DD9C320C28621D1800DB1147 /* TimerRouter.swift in Sources */,
+				DD9C3204286215E700DB1147 /* AssemplyTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
