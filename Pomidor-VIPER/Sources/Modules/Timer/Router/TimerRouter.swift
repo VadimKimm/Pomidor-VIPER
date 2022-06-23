@@ -10,7 +10,6 @@ import UIKit
 protocol TimerRouterInput {
     init(viewController: TimerViewController)
     func openSettingsViewConroller()
-    static func openTimerViewController() -> UIViewController
 }
 
 class TimerRouter: TimerRouterInput {
@@ -23,8 +22,11 @@ class TimerRouter: TimerRouterInput {
     func openSettingsViewConroller() {
         viewController.present(SettingsRouter.openSettingsViewController(), animated: true)
     }
+}
 
-    static func openTimerViewController() -> UIViewController {
-        return TimerViewController()
+extension TimerRouter: SettingsRouterToTimerRouterOutput {
+    static func receiveDataFromSettingsRouter(workTime: Int, restTime: Int) {
+        print(workTime, restTime)
     }
+
 }

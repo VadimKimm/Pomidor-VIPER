@@ -17,7 +17,6 @@ class AssemplyTimer: AssemplyTimerInput {
     static func assembleModule() -> UIViewController {
         let viewContoller = TimerViewController()
         let presenter = TimerPresenter(view: viewContoller)
-        
         let interactor = TimerInteractor(presenter: presenter)
         let router = TimerRouter(viewController: viewContoller)
 
