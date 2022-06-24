@@ -8,6 +8,7 @@
 protocol FunctionDelegateProtocol {
     func sendShort()
     func sendLong()
+    func sendDemo()
 }
 
 class SettingsPresenter: SettingsViewOutputProtocol {
@@ -35,11 +36,25 @@ class SettingsPresenter: SettingsViewOutputProtocol {
         interactor.choseDurationMode(.long)
         delegate.sendLong()
     }
+    
+    func tapChoseDemoDuration() {
+        interactor.choseDurationMode(.demo)
+        delegate.sendDemo()
+    }
 }
 // MARK: - Extension
 extension SettingsPresenter: SettingsInteractorOutputProtocol {
-    func receiveDurationData(durationData: Bool) {
-        let mode = durationData ? "25 минут : 5 минут" : "50 минут : 10 минут"
+    func receiveDurationData(durationData: DurationData) {
+        var mode = String()
+        
+        switch durationData {
+        case .short:
+            mode = "25 минут : 5 минут"
+        case .long:
+            mode = "50 минут : 10 минут"
+        case .demo:
+            mode = "1 минута : 1 минута"
+        }
         let durationModeString = "Выбран режим \(mode)"
 
         view.changeDuration(durationModeString)

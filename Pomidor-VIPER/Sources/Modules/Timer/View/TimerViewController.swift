@@ -31,6 +31,10 @@ class TimerViewController: UIViewController, FunctionDelegateProtocol  {
     func sendLong() {
         timerView!.timerLabel.text = "50:00"
     }
+    
+    func sendDemo() {
+        timerView!.timerLabel.text = "01:00"
+    }
 
     var presenter: TimerViewOutput!
 
@@ -40,9 +44,6 @@ class TimerViewController: UIViewController, FunctionDelegateProtocol  {
     }
 
     //MARK: - Lifecycle -
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

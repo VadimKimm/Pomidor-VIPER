@@ -12,7 +12,7 @@ protocol SettingsInteractorInputProtocol: AnyObject {
 }
 
 protocol SettingsInteractorOutputProtocol: AnyObject {
-    func receiveDurationData(durationData: Bool)
+    func receiveDurationData(durationData: DurationData)
 }
 
 // MARK: - Class
@@ -27,22 +27,23 @@ class SettingsInteractor: SettingsInteractorInputProtocol {
     
 //    MARK: - Functions
     func choseDurationMode(_ mode: DurationData) {
-        var newDurationData = Bool()
         
         switch mode {
         case .short:
-            newDurationData = true
             
             TimerEntity.timer.workTime = DurationData.shortWorkTime
             TimerEntity.timer.restTime = DurationData.shortRestTime
         case .long:
-            newDurationData = false
             
             TimerEntity.timer.workTime = DurationData.longWorkTime
             TimerEntity.timer.restTime = DurationData.longRestTime
+        case .demo:
+            
+            TimerEntity.timer.workTime = DurationData.demoWorkTime
+            TimerEntity.timer.restTime = DurationData.demoRestTime
         }
         
-        presenter.receiveDurationData(durationData: newDurationData)
+        presenter.receiveDurationData(durationData: mode)
     }
 
 }

@@ -19,8 +19,8 @@ class TimerEntity: TimerModel {
     var isWorkTime = true
     var isStarted = false
     var isAnimationStarted = false
-    var workTime = 2
-    var restTime = 1
+    var workTime = 25
+    var restTime = 5
 
     static var timer = TimerEntity()
 }
