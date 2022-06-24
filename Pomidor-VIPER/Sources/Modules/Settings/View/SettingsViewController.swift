@@ -10,6 +10,7 @@ import UIKit
 // MARK: - View protocols
 protocol SettingsViewInputProtocol: AnyObject {
     func changeDuration(_ duration: String)
+    
 }
 
 protocol SettingsViewOutputProtocol: AnyObject {
@@ -17,6 +18,8 @@ protocol SettingsViewOutputProtocol: AnyObject {
     func didTapSaveNewDurationButton()
     func tapChoseShortDuration()
     func tapChoseLongDuration()
+    func tapChoseDemoDuration()
+
 }
 
 //MARK: - Main class
@@ -93,6 +96,26 @@ class SettingsViewController: UIViewController {
 
         return button
     }()
+    
+    private var demonstrationDurationModeActivationButton: SelectedButton = {
+        let button = SelectedButton()
+
+        button.setTitle(Strings.demonstrationModeButtonTitle, for: .normal)
+        button.setTitleColor(Colors.buttonTitleColor, for: .normal)
+        button.setTitleShadowColor(.clear, for: .selected)
+
+        button.titleLabel?.font = .systemFont(ofSize: Metrics.buttonFontSize, weight: .medium)
+        button.backgroundColor = Colors.buttonBackgroundColor
+
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = Metrics.buttonHeight / 2
+
+        button.widthAnchor.constraint(equalTo: button.heightAnchor, multiplier: 1).isActive = true
+        button.translatesAutoresizingMaskIntoConstraints = false
+
+
+        return button
+    }()
 
     private let saveNewDurationButton: UIButton = {
         let button = UIButton()
@@ -126,6 +149,7 @@ class SettingsViewController: UIViewController {
 
         shortDurationModeActivationButton.addTarget(self, action: #selector(choseShortDuration), for: .touchUpInside)
         longDurationModeActivationButton.addTarget(self, action: #selector(choseLongDuration), for: .touchUpInside)
+        demonstrationDurationModeActivationButton.addTarget(self, action: #selector(choseDemonstrarionDuration), for: .touchUpInside)
         saveNewDurationButton.addTarget(self, action: #selector(saveNewDuration), for: .touchUpInside)
     }
 //    MARK: - Settings
@@ -135,6 +159,7 @@ class SettingsViewController: UIViewController {
 
         parentStackView.addArrangedSubview(shortDurationModeActivationButton)
         parentStackView.addArrangedSubview(longDurationModeActivationButton)
+        parentStackView.addArrangedSubview(demonstrationDurationModeActivationButton)
         parentStackView.addArrangedSubview(saveNewDurationButton)
     }
 
@@ -160,6 +185,7 @@ class SettingsViewController: UIViewController {
 //    MARK: - Functions
     @objc func saveNewDuration() {
         presenter.didTapSaveNewDurationButton()
+        
     }
 
     @objc func choseShortDuration() {
@@ -167,13 +193,23 @@ class SettingsViewController: UIViewController {
 
         shortDurationModeActivationButton.isSelected = true
         longDurationModeActivationButton.isSelected = false
+        demonstrationDurationModeActivationButton.isSelected = false
     }
 
     @objc func choseLongDuration() {
         presenter.tapChoseLongDuration()
-
+        
         shortDurationModeActivationButton.isSelected = false
         longDurationModeActivationButton.isSelected = true
+        demonstrationDurationModeActivationButton.isSelected = false
+    }
+    
+    @objc func choseDemonstrarionDuration() {
+        presenter.tapChoseDemoDuration()
+        
+        shortDurationModeActivationButton.isSelected = false
+        longDurationModeActivationButton.isSelected = false
+        demonstrationDurationModeActivationButton.isSelected = true
     }
 
 }
@@ -188,7 +224,7 @@ extension SettingsViewController: SettingsViewInputProtocol {
 extension SettingsViewController {
     enum Metrics {
         static let parentStackViewSpacing: CGFloat = 15
-        static let parentStackViewHeight: CGFloat = 430
+        static let parentStackViewHeight: CGFloat = 600
 
         static let buttonFontSize: CGFloat = 20
         static let buttonHeight: CGFloat = 135
@@ -198,6 +234,7 @@ extension SettingsViewController {
     enum Strings {
         static let shortModeButtonTitle = "Режим #1"
         static let longModeButtonTitle = "Режим #2"
+        static let demonstrationModeButtonTitle = "Демо"
         static let newDuraionButtonTitle = "Назад"
 
     }

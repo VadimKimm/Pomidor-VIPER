@@ -109,4 +109,7 @@ extension TimerViewController: FunctionDelegateProtocol {
     func sendLong() {
         timerView!.timerLabel.text = "50:00"
     }
+	func sendDemo() {
+        timerView!.timerLabel.text = "01:00"
+    }
 }
