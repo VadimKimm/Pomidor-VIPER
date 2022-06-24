@@ -5,7 +5,7 @@
 //  Created by Vadim Kim on 21.06.2022.
 //
 
-import UIKit
+import Foundation
 
 protocol TimerRouterInput: AnyObject {
     init(viewController: TimerViewController)
