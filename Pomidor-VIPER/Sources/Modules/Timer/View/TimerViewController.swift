@@ -103,13 +103,13 @@ extension TimerViewController: TimerViewInput {
 
 extension TimerViewController: FunctionDelegateProtocol {
     func sendShort() {
-        timerView!.timerLabel.text = "25:00"
+        timerView?.timerLabel.text = "25:00"
     }
 
     func sendLong() {
-        timerView!.timerLabel.text = "50:00"
+        timerView?.timerLabel.text = "50:00"
     }
 	func sendDemo() {
-        timerView!.timerLabel.text = "01:00"
+        timerView?.timerLabel.text = "01:00"
     }
 }
