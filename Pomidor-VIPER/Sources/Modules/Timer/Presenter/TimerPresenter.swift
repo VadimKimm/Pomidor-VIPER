@@ -129,7 +129,7 @@ extension TimerPresenter {
 
     private func makeCountDown(of time: Double) {
 
-        counter += 0.1
+        counter += 0.01
 
         let differenceTime = Int((time - counter).rounded(.up))
         let minutes = differenceTime / 60
