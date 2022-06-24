@@ -16,7 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         let window = UIWindow(windowScene: windowScene)
 
-        RootRouter().presentViewContoller(in: window)
+        window.rootViewController = AssemblyTimer.assembleModule()
+        window.makeKeyAndVisible()
+
         self.window = window
     }
 }
