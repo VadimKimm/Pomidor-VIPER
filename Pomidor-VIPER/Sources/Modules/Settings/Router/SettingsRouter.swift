@@ -18,13 +18,14 @@ class SettingsRouter: SettingsRouterInput {
     unowned let viewController: SettingsViewController
 
     var timerRouter: TimerRouter!
-
+    
     required init(viewController: SettingsViewController) {
         self.viewController = viewController
     }
 
     func openTimerViewController() {
         viewController.dismiss(animated: true)
+        
     }
 
    static func openSettingsViewController() -> UIViewController {

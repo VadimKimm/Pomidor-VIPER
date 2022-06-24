@@ -23,7 +23,14 @@ protocol TimerViewOutput: AnyObject {
     func resetButtonTapped()
 }
 
-class TimerViewController: UIViewController {
+class TimerViewController: UIViewController, FunctionDelegateProtocol  {
+    func sendShort() {
+        timerView!.timerLabel.text = "25:00"
+    }
+    
+    func sendLong() {
+        timerView!.timerLabel.text = "50:00"
+    }
 
     var presenter: TimerViewOutput!
 
@@ -33,7 +40,10 @@ class TimerViewController: UIViewController {
     }
 
     //MARK: - Lifecycle -
-
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

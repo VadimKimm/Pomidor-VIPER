@@ -21,5 +21,8 @@ class AssemblySettings: AssemblySettingsInputs {
         view.presenter = presenter
         presenter.interactor = interactor
         presenter.router = router
+        
+        let delegate = AssemblyTimer.viewContoller
+        presenter.delegate = delegate
     }
 }

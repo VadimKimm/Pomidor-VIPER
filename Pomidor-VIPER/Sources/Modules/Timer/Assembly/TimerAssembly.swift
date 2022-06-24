@@ -8,10 +8,10 @@
 import UIKit
 
 class AssemblyTimer{
-
+    static var viewContoller = TimerViewController()
+    static var presenter = TimerPresenter(view: viewContoller)
+    
     static func assembleModule() -> UIViewController {
-        let viewContoller = TimerViewController()
-        let presenter = TimerPresenter(view: viewContoller)
         let interactor = TimerInteractor(presenter: presenter)
         let router = TimerRouter(viewController: viewContoller)
 

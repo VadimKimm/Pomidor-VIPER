@@ -5,11 +5,18 @@
 //  Created by t h a . m a m e rozz on 21.06.22.
 //
 
+protocol FunctionDelegateProtocol {
+    func sendShort()
+    func sendLong()
+}
+
 class SettingsPresenter: SettingsViewOutputProtocol {
 //    MARK: - Properties
     unowned var view: SettingsViewInputProtocol
     var interactor: SettingsInteractorInputProtocol!
     var router: SettingsRouter!
+    
+    var delegate: FunctionDelegateProtocol!
     
 //    MARK: - Initilizer
     required init(view: SettingsViewInputProtocol) {
@@ -19,13 +26,14 @@ class SettingsPresenter: SettingsViewOutputProtocol {
     func didTapSaveNewDurationButton() {
         router.openTimerViewController()
     }
-
     func tapChoseShortDuration() {
         interactor.choseDurationMode(.short)
+        delegate.sendShort()
     }
 
     func tapChoseLongDuration() {
         interactor.choseDurationMode(.long)
+        delegate.sendLong()
     }
 }
 // MARK: - Extension
