@@ -23,14 +23,7 @@ protocol TimerViewOutput: AnyObject {
     func resetButtonTapped()
 }
 
-class TimerViewController: UIViewController, FunctionDelegateProtocol  {
-    func sendShort() {
-        timerView!.timerLabel.text = "25:00"
-    }
-    
-    func sendLong() {
-        timerView!.timerLabel.text = "50:00"
-    }
+class TimerViewController: UIViewController {
 
     var presenter: TimerViewOutput!
 
@@ -40,10 +33,7 @@ class TimerViewController: UIViewController, FunctionDelegateProtocol  {
     }
 
     //MARK: - Lifecycle -
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -108,5 +98,15 @@ extension TimerViewController: TimerViewInput {
 
     func resetCircularProgressBarAnimation() {
         timerView?.circularProgressBar.stopProgressBarAnimation()
+    }
+}
+
+extension TimerViewController: FunctionDelegateProtocol {
+    func sendShort() {
+        timerView!.timerLabel.text = "25:00"
+    }
+
+    func sendLong() {
+        timerView!.timerLabel.text = "50:00"
     }
 }

@@ -129,7 +129,7 @@ extension TimerPresenter {
 
     private func makeCountDown(of time: Double) {
 
-        counter += 0.01
+        counter += 0.1
 
         let differenceTime = Int((time - counter).rounded(.up))
         let minutes = differenceTime / 60
@@ -141,17 +141,13 @@ extension TimerPresenter {
 
         if counter >= time  {
             timer.invalidate()
-            changeTimerMode()
+            counter = 0
+
+            interactor.toggleIsStarted()
+            interactor.toggleIsWorkTime()
+            interactor.toggleIsAnimationStarted()
+
+            getDataForInitializeTimer()
         }
-    }
-
-    private func changeTimerMode() {
-        counter = 0
-
-        interactor.toggleIsStarted()
-        interactor.toggleIsWorkTime()
-        interactor.toggleIsAnimationStarted()
-
-        getDataForInitializeTimer()
     }
 }

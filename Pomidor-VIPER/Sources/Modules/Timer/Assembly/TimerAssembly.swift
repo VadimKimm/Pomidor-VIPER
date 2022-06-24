@@ -7,7 +7,8 @@
 
 import UIKit
 
-class AssemblyTimer{
+class AssemblyTimer {
+    
     static var viewContoller = TimerViewController()
     static var presenter = TimerPresenter(view: viewContoller)
     
