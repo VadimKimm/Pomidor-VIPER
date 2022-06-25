@@ -7,20 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD88924828645A1600757D01 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88924728645A1600757D01 /* SettingsViewController.swift */; };
+		DD88924A28645A4A00757D01 /* SelectedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88924928645A4A00757D01 /* SelectedButton.swift */; };
+		DD88924C28645A7D00757D01 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88924B28645A7D00757D01 /* SettingsPresenter.swift */; };
+		DD88924E28645AB900757D01 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88924D28645AB900757D01 /* SettingsInteractor.swift */; };
+		DD88925028645AEE00757D01 /* SettingsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88924F28645AEE00757D01 /* SettingsEntity.swift */; };
+		DD88925228645B2C00757D01 /* AssemblySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88925128645B2C00757D01 /* AssemblySettings.swift */; };
+		DD88925428645B5500757D01 /* SettingsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD88925328645B5500757D01 /* SettingsRouter.swift */; };
+		DD9C32022862150000DB1147 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C32012862150000DB1147 /* TimerViewController.swift */; };
+		DD9C3204286215E700DB1147 /* TimerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C3203286215E700DB1147 /* TimerAssembly.swift */; };
+		DD9C320628621A0D00DB1147 /* TimerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320528621A0D00DB1147 /* TimerPresenter.swift */; };
+		DD9C320828621A9600DB1147 /* TimerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320728621A9600DB1147 /* TimerInteractor.swift */; };
+		DD9C320A28621CEB00DB1147 /* TimerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320928621CEB00DB1147 /* TimerEntity.swift */; };
+		DD9C320C28621D1800DB1147 /* TimerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320B28621D1800DB1147 /* TimerRouter.swift */; };
+		DD9C320E286221EE00DB1147 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320D286221EE00DB1147 /* TimerView.swift */; };
+		DD9C32102862239C00DB1147 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9C320F2862239C00DB1147 /* CircularProgressBarView.swift */; };
 		DDB391D928607DEE005F2DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB391D828607DEE005F2DC9 /* AppDelegate.swift */; };
 		DDB391DB28607DEE005F2DC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB391DA28607DEE005F2DC9 /* SceneDelegate.swift */; };
-		DDB391DD28607DEE005F2DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB391DC28607DEE005F2DC9 /* ViewController.swift */; };
-		DDB391E028607DEE005F2DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB391DE28607DEE005F2DC9 /* Main.storyboard */; };
 		DDB391E228607DEF005F2DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB391E128607DEF005F2DC9 /* Assets.xcassets */; };
 		DDB391E528607DEF005F2DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB391E328607DEF005F2DC9 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD88924728645A1600757D01 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DD88924928645A4A00757D01 /* SelectedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedButton.swift; sourceTree = "<group>"; };
+		DD88924B28645A7D00757D01 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		DD88924D28645AB900757D01 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		DD88924F28645AEE00757D01 /* SettingsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEntity.swift; sourceTree = "<group>"; };
+		DD88925128645B2C00757D01 /* AssemblySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblySettings.swift; sourceTree = "<group>"; };
+		DD88925328645B5500757D01 /* SettingsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRouter.swift; sourceTree = "<group>"; };
+		DD9C32012862150000DB1147 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		DD9C3203286215E700DB1147 /* TimerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAssembly.swift; sourceTree = "<group>"; };
+		DD9C320528621A0D00DB1147 /* TimerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPresenter.swift; sourceTree = "<group>"; };
+		DD9C320728621A9600DB1147 /* TimerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerInteractor.swift; sourceTree = "<group>"; };
+		DD9C320928621CEB00DB1147 /* TimerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerEntity.swift; sourceTree = "<group>"; };
+		DD9C320B28621D1800DB1147 /* TimerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerRouter.swift; sourceTree = "<group>"; };
+		DD9C320D286221EE00DB1147 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		DD9C320F2862239C00DB1147 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 		DDB391D528607DEE005F2DC9 /* Pomidor-VIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pomidor-VIPER.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB391D828607DEE005F2DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB391DA28607DEE005F2DC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDB391DC28607DEE005F2DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DDB391DF28607DEE005F2DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDB391E128607DEF005F2DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB391E428607DEF005F2DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB391E628607DEF005F2DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +63,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD889240286458F500757D01 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				DD9C3203286215E700DB1147 /* TimerAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		DD889241286459A200757D01 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				DD88925128645B2C00757D01 /* AssemblySettings.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		DD889242286459AA00757D01 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DD88925328645B5500757D01 /* SettingsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DD889243286459B000757D01 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DD88924F28645AEE00757D01 /* SettingsEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DD889244286459B700757D01 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DD88924B28645A7D00757D01 /* SettingsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DD889245286459BC00757D01 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DD88924D28645AB900757D01 /* SettingsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DD889246286459C300757D01 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD88924728645A1600757D01 /* SettingsViewController.swift */,
+				DD88924928645A4A00757D01 /* SelectedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DDB391CC28607DEE005F2DC9 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +139,115 @@
 		DDB391D728607DEE005F2DC9 /* Pomidor-VIPER */ = {
 			isa = PBXGroup;
 			children = (
-				DDB391D828607DEE005F2DC9 /* AppDelegate.swift */,
-				DDB391DA28607DEE005F2DC9 /* SceneDelegate.swift */,
-				DDB391DC28607DEE005F2DC9 /* ViewController.swift */,
-				DDB391DE28607DEE005F2DC9 /* Main.storyboard */,
+				DDB391F42861B4AC005F2DC9 /* Sources */,
+				DDB391F32861B480005F2DC9 /* Resources */,
+			);
+			path = "Pomidor-VIPER";
+			sourceTree = "<group>";
+		};
+		DDB391EC2861B342005F2DC9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DDB391ED2861B34B005F2DC9 /* Timer */,
+				DDB391F62861B501005F2DC9 /* Settings */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DDB391ED2861B34B005F2DC9 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				DDB391EE2861B363005F2DC9 /* View */,
+				DDB391EF2861B36A005F2DC9 /* Interactor */,
+				DDB391F02861B38D005F2DC9 /* Presenter */,
+				DDB391F12861B398005F2DC9 /* Entity */,
+				DDB391F22861B3A6005F2DC9 /* Router */,
+				DD889240286458F500757D01 /* Assembly */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		DDB391EE2861B363005F2DC9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD9C32012862150000DB1147 /* TimerViewController.swift */,
+				DD9C320D286221EE00DB1147 /* TimerView.swift */,
+				DD9C320F2862239C00DB1147 /* CircularProgressBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDB391EF2861B36A005F2DC9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DD9C320728621A9600DB1147 /* TimerInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DDB391F02861B38D005F2DC9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DD9C320528621A0D00DB1147 /* TimerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		DDB391F12861B398005F2DC9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DD9C320928621CEB00DB1147 /* TimerEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		DDB391F22861B3A6005F2DC9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				DD9C320B28621D1800DB1147 /* TimerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		DDB391F32861B480005F2DC9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				DDB391E128607DEF005F2DC9 /* Assets.xcassets */,
 				DDB391E328607DEF005F2DC9 /* LaunchScreen.storyboard */,
 				DDB391E628607DEF005F2DC9 /* Info.plist */,
 			);
-			path = "Pomidor-VIPER";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DDB391F42861B4AC005F2DC9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DDB391F52861B4C4005F2DC9 /* App */,
+				DDB391EC2861B342005F2DC9 /* Modules */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DDB391F52861B4C4005F2DC9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DDB391D828607DEE005F2DC9 /* AppDelegate.swift */,
+				DDB391DA28607DEE005F2DC9 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DDB391F62861B501005F2DC9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				DD889246286459C300757D01 /* View */,
+				DD889245286459BC00757D01 /* Interactor */,
+				DD889244286459B700757D01 /* Presenter */,
+				DD889243286459B000757D01 /* Entity */,
+				DD889242286459AA00757D01 /* Router */,
+				DD889241286459A200757D01 /* Assembly */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +310,6 @@
 			files = (
 				DDB391E528607DEF005F2DC9 /* LaunchScreen.storyboard in Resources */,
 				DDB391E228607DEF005F2DC9 /* Assets.xcassets in Resources */,
-				DDB391E028607DEE005F2DC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +320,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB391DD28607DEE005F2DC9 /* ViewController.swift in Sources */,
+				DD9C320E286221EE00DB1147 /* TimerView.swift in Sources */,
+				DD9C320828621A9600DB1147 /* TimerInteractor.swift in Sources */,
+				DD88925428645B5500757D01 /* SettingsRouter.swift in Sources */,
+				DD9C32022862150000DB1147 /* TimerViewController.swift in Sources */,
+				DD9C320A28621CEB00DB1147 /* TimerEntity.swift in Sources */,
+				DD9C320628621A0D00DB1147 /* TimerPresenter.swift in Sources */,
 				DDB391D928607DEE005F2DC9 /* AppDelegate.swift in Sources */,
 				DDB391DB28607DEE005F2DC9 /* SceneDelegate.swift in Sources */,
+				DD9C32102862239C00DB1147 /* CircularProgressBarView.swift in Sources */,
+				DD88924828645A1600757D01 /* SettingsViewController.swift in Sources */,
+				DD9C320C28621D1800DB1147 /* TimerRouter.swift in Sources */,
+				DD88924A28645A4A00757D01 /* SelectedButton.swift in Sources */,
+				DD9C3204286215E700DB1147 /* TimerAssembly.swift in Sources */,
+				DD88925228645B2C00757D01 /* AssemblySettings.swift in Sources */,
+				DD88924C28645A7D00757D01 /* SettingsPresenter.swift in Sources */,
+				DD88925028645AEE00757D01 /* SettingsEntity.swift in Sources */,
+				DD88924E28645AB900757D01 /* SettingsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DDB391DE28607DEE005F2DC9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDB391DF28607DEE005F2DC9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DDB391E328607DEF005F2DC9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +477,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7CZSM4DJ6N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Pomidor-VIPER/Info.plist";
+				INFOPLIST_FILE = "Pomidor-VIPER/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +504,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7CZSM4DJ6N;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Pomidor-VIPER/Info.plist";
+				INFOPLIST_FILE = "Pomidor-VIPER/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
